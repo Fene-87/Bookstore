@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
 import './Book.css';
 
-const Book = () => {
-  const [state, setState] = useState('');
+const Book = ({ details }) => {
+  const { title, author } = details;
+
   return (
     <section className="bookContainer">
       <div className="details">
         <h4>Action</h4>
-        <h3>The Hunger Games</h3>
-        <p>Suzanne Collins</p>
+        <h3>{title}</h3>
+        <p>{author}</p>
         <ul className="comments">
           <li>Comments</li>
           <li>Remove</li>
