@@ -7,13 +7,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Navbar = () => {
   const navigation = useNavigate();
 
+  const handleBookPage = () => {
+    navigation('/');
+  };
+
+  const handleCategoriesPage = () => {
+    navigation('/categories');
+  };
+
   return (
     <nav className="navContainer">
       <div className="links">
         <h2 className="logo">Bookstore CMS</h2>
         <ul className="navLinks">
-          <li className="books">Books</li>
-          <li className="categories">Categories</li>
+          <li onClick={handleBookPage} className="books">Books</li>
+          <li onClick={handleCategoriesPage} className="categories">Categories</li>
         </ul>
       </div>
       <div className="userCircle">

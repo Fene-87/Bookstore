@@ -1,4 +1,14 @@
 .booksContainer {
-    background-color: #f5f6fa;
-    padding-top: 6.313rem;
+  background-color: #f5f6fa;
+  padding-top: 6.313rem;
+  padding-bottom: 6.313rem;
+}
+
+.booksSection {
+  margin: 0 2.375rem;
+  max-width: 87.5rem;
+  height: 68.563rem;
+  background-color: #fafafa;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid green;
 }

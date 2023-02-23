@@ -1,9 +1,10 @@
 import React from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 
-const Categories = () => {
-  return (
-    <div>Categories</div>
-  )
-}
+const Categories = () => (
+  <div>
+    <Navbar />
+  </div>
+);
 
 export default Categories;
