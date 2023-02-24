@@ -29,7 +29,6 @@ const Books = () => {
         <Book details={bookDetails[0]} />
         <Book details={bookDetails[1]} />
         <Book details={bookDetails[2]} />
-        <div className="borderLine" />
         <Form />
       </section>
     </div>
