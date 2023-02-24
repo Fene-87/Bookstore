@@ -1,0 +1,25 @@
+.categoriesContainer {
+  background-color: #f5f6fa;
+  padding-top: 6.313rem;
+  padding-bottom: 14.313rem;
+}
+
+.status {
+  width: 11.5rem;
+  height: 3.3rem;
+  margin: 2rem 2.375rem;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-family: Roboto Slab, sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
