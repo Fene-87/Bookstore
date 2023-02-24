@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
 import Books from './pages/Books/Books';
 import Categories from './pages/Categories/Categories';
 

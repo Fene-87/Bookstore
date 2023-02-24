@@ -23,7 +23,7 @@
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -36,7 +36,7 @@
 .details > h3 {
   height: 1.813rem;
   margin: 0.188rem 10.188rem 0 0;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -50,7 +50,7 @@
   width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -70,7 +70,7 @@
   width: 4.563rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -104,7 +104,7 @@
 }
 
 .percentage {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -116,7 +116,7 @@
 
 .completed {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
@@ -138,7 +138,7 @@
 
 .currentChapter {
   opacity: 0.5;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
@@ -150,7 +150,7 @@
 }
 
 .chapterNo {
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -169,7 +169,7 @@
   border-radius: 3px;
   background-color: #0290ff;
   border: none;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
