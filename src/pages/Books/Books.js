@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from '../../components/book/Book';
+import Form from '../../components/form/Form';
 import Navbar from '../../components/Navbar/Navbar';
 import './Books.css';
 
@@ -28,6 +29,8 @@ const Books = () => {
         <Book details={bookDetails[0]} />
         <Book details={bookDetails[1]} />
         <Book details={bookDetails[2]} />
+        <div className="borderLine" />
+        <Form />
       </section>
     </div>
   );
