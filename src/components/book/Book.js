@@ -1,17 +1,24 @@
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/features/books/booksSlice';
 import './Book.css';
 
-const Book = ({ details }) => {
-  const { title, author } = details;
+const Book = ({
+  itemId,
+  title,
+  author,
+  category,
+}) => {
+  const dispatch = useDispatch();
 
   return (
     <section className="bookContainer">
       <div className="details">
-        <h4>Action</h4>
+        <h4>{category}</h4>
         <h3>{title}</h3>
         <p>{author}</p>
         <ul className="comments">
           <li>Comments</li>
-          <li>Remove</li>
+          <li onClick={() => dispatch(removeBook(itemId))}>Remove</li>
           <li>Edit</li>
         </ul>
       </div>
