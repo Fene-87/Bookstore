@@ -23,6 +23,8 @@
         "import/no-extraneous-dependencies": "off",
         "react/prop-types": "off",
         "no-param-reassign": "off",
+        "react/jsx-props-no-spreading": "off",
+        "arrow-body-style": "off",
         "no-shadow": "off"
     },
     "ignorePatterns": [

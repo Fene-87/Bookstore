@@ -1,7 +1,6 @@
 import './Book.css';
 
-const Book = ({ details }) => {
-  const { title, author } = details;
+const Book = ({ item_id, title, author, category }) => {
 
   return (
     <section className="bookContainer">
