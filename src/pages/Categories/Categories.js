@@ -1,10 +1,11 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../../redux/features/categories/categoriesSlice';
 import Navbar from '../../components/Navbar/Navbar';
 import './Categories.css';
 
 const Categories = () => {
+  const { categories } = useSelector((store) => store.categories);
   const dispatch = useDispatch();
   const handleCheckStatus = () => {
     dispatch(checkStatus());
@@ -13,6 +14,7 @@ const Categories = () => {
   return (
     <div className="categoriesContainer">
       <Navbar />
+      <h1>{categories}</h1>
       <button
         className="status"
         type="button"
