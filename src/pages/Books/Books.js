@@ -13,7 +13,7 @@ const Books = () => {
       <Navbar />
       <section className="booksSection">
         {books.map((item) => (
-          <Book key={item.item_id} {...item} />
+          <Book key={item.itemId} {...item} />
         ))}
         <Form />
       </section>
