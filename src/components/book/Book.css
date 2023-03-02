@@ -47,7 +47,6 @@
 }
 
 .details > p {
-  width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
   font-family: Roboto Slab, sans-serif;
@@ -78,6 +77,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  cursor: pointer;
 }
 
 .progress {
@@ -179,4 +179,5 @@
   text-align: center;
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
 }
