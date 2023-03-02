@@ -1,9 +1,8 @@
-import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/features/books/booksSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import './Book.css';
 
 const Book = ({
-  itemId,
+  id,
   title,
   author,
   category,
@@ -18,7 +17,7 @@ const Book = ({
         <p>{author}</p>
         <ul className="comments">
           <li>Comments</li>
-          <li onClick={() => dispatch(removeBook(itemId))}>Remove</li>
+          <li>Remove</li>
           <li>Edit</li>
         </ul>
       </div>
