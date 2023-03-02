@@ -1,26 +1,77 @@
-import { createSlice } from '@reduxjs/toolkit';
-import bookItems from '../../../bookItems';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
-  books: bookItems,
+  books: [],
+  status: 'idle',
+  error: null,
+  createdStatus: '',
+  deleteStatus: '',
 };
+
+const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1yepAggSrySn7jXtDr4G/books/';
+
+export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
+  try {
+    const response = await axios.get(baseUrl);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+});
+
+export const postBooks = createAsyncThunk('books/postBooks', async (initialBooks) => {
+  try {
+    const response = await axios.post(baseUrl, initialBooks);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+});
+
+export const deleteBooks = createAsyncThunk('books/deleteBooks', async (bookId) => {
+  try {
+    const response = await axios.delete(baseUrl + bookId);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+});
 
 const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    addBook: (state, { payload }) => {
-      state.books.push(payload);
-    },
-    removeBook: (state, { payload }) => {
-      return {
+  extraReducers(builder) {
+    builder
+      .addCase(fetchBooks.pending, (state) => ({
         ...state,
-        books: state.books.filter((item) => item.itemId !== payload),
-      };
-    },
+        status: 'loading',
+      }))
+      .addCase(fetchBooks.fulfilled, (state, { payload }) => {
+        const keys = Object.keys(payload);
+        const tempArray = [];
+        keys.forEach((key) => {
+          tempArray.push(Object.assign({ id: key }, ...payload[key]));
+        });
+        state.books = [...tempArray];
+        state.status = 'loaded';
+      })
+      .addCase(fetchBooks.rejected, (state, action) => ({
+        ...state,
+        status: 'failed',
+        error: [...state.error, action.error.message],
+      }))
+      .addCase(postBooks.fulfilled, (state, { payload }) => ({
+        ...state,
+        status: 'succeeded',
+        createdStatus: payload,
+      }))
+      .addCase(deleteBooks.fulfilled, (state, { payload }) => ({
+        ...state,
+        status: 'succeeded',
+        createdStatus: payload,
+      }));
   },
 });
-
-export const { addBook, removeBook } = booksSlice.actions;
 
 export default booksSlice.reducer;

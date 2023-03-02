@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
-import { addBook } from '../../redux/features/books/booksSlice';
+import { postBooks } from '../../redux/features/books/booksSlice';
 import './Form.css';
 
 const Form = () => {
@@ -12,9 +12,9 @@ const Form = () => {
 
   const handleAddBook = (e) => {
     e.preventDefault();
-    dispatch(addBook(
+    dispatch(postBooks(
       {
-        itemId: uniqid(),
+        item_id: uniqid(),
         title: newTitle,
         author: newAuthor,
         category: newCategory,
