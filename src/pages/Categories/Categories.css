@@ -4,6 +4,14 @@
   padding-bottom: 14.313rem;
 }
 
+.categoriesHeader{
+  margin: 2rem 2.375rem;
+  padding: 0.4rem 1rem;
+  font-family: Roboto Slab, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 .status {
   width: 11.5rem;
   height: 3.3rem;

@@ -14,7 +14,7 @@ const Categories = () => {
   return (
     <div className="categoriesContainer">
       <Navbar />
-      <h1>{categories}</h1>
+      <h1 className="categoriesHeader">{categories}</h1>
       <button
         className="status"
         type="button"
