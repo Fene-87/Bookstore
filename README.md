@@ -61,7 +61,7 @@
 
 Click on the link to view the portfolio website.
 
-- [Coming Soon]()
+- [Coming Soon](https://bookstore-i0bx.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
